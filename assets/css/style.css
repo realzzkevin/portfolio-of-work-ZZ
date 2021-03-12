@@ -3,7 +3,7 @@
 }
 
 :root{
-
+ 
 }
 body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -22,7 +22,13 @@ h1 {
     font-size: 200%;
     padding-left: 5%;
 }
-header nav ul {
+
+ul {
+    display: inline-flex;
+    list-style-type: none;
+}
+
+header nav ul{
     display: inline-flex;
     list-style-type: none;
     text-align: right;
@@ -33,21 +39,21 @@ header li {
     padding-right: 20px;
 }
 
-body figure {
+#photo {
     background-color: aqua;
     margin-bottom: 5px;
     display: flex;
     justify-content: center;
 }
 
-#photo {
+#my-photo {
     height:5cm;
     width: 5cm;
     padding: 10px;
 }
 
 main{
-    margin: 10px, 0, 10px, 0; 
+    margin: 10px 0 10px 0; 
     background-color: chartreuse;
     display: flex;
     flex-direction: column;
@@ -63,7 +69,7 @@ main{
     margin:10px;
     display: flex;
     flex-direction:row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .side-bar {
@@ -71,8 +77,9 @@ main{
     min-height: 100%;
     background-color: bisque;
     border-right-width: 5px;
-    border-right-color: chocolate;
-    border-right-style: solid;
+    border-color: chocolate;
+    border-style: solid;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,40 +87,124 @@ main{
 }
 
 .detail {
-    width:70%;
+    width:75%;
     padding-left: 10px;
 }
 
 #works-gallery{
-
     display:flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    height:auto;
+    
 }
 
 .works {
-    width:500px;
+    width:650px;
     height:300px;
-
+    margin: 10px;
 }
 
 .works figcaption {
     background-color: darkblue;
-    max-width: 30%;
-    max-height: 20%;
+    width:30%;
+    height:20%;
     color:antiquewhite;
     position: relative;
-    bottom:0; left: 20%;
+    bottom:20%; left: 0%;
     z-index: 10;
+}
+
+.work-images {
+   width:100%;
+   max-height:100%;
+   object-fit:cover;
+   object-position: top;
+}
+
+.detail ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
 }
 
 footer {
     text-align: center;
 }
-@media screen and (max-width:992px){
+
+@media screen and (min-width: 993px){
+
+    .works:first-child:not(:hover){
+        width:100%;
+        height:500px;
+    }
+    
+    .works:hover {
+        order:-1;
+        width: 100%;
+        height: 500px;
+    }
+
+    .works:hover ~ .works{
+        width:650px;   
+        height:300px;
+
+    }
+    .work:hover .work-images {
+        width:100%;
+        max-height:100%;
+        object-fit:cover;
+        object-position: top;
+    }
+    
 
 }
 
-@media screen and (max-width:768px)[
+@media screen and (max-width:992px){
+    
+    .works {
+        width: 46%;
+    }
+}
 
-]
+@media screen and (max-width:768px){
+    
+   ul {
+        display:inline-block;
+    }
+    
+    header li {
+        padding:5px;
+    }
+    
+    .cards{
+        flex-direction:column;
+        align-items: center;
+    }
+    
+    .side-bar {
+        width: 97%;
+        border-bottom-width: 5px ;
+        border-right-width: 0;
+        flex-direction: row;
+        justify-content: center;
+        align-items:baseline;
+    }
+    
+    .detail {
+        width:97%;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .works {
+        width:100%;
+    }
+    
+    .detail ul{
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}
+
