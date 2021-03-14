@@ -3,23 +3,33 @@
 }
 
 :root{
- 
+ --mainColor: rgb(185, 204, 211);
+ --highLight: rgba(16, 19, 163, 0.575);
+ --frameColor: rgb(203, 223, 22);
+ --fontColor: rgb(8, 62, 207);
+ --fontColorLight:rgb(255, 255, 255);
 }
 body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--mainColor);
+}
+
+h1,h2,h3,h4,h5 {
+    font-size: 200%;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    background-color:lightblue;
+    background-color: var(--highLight);
+    padding-top:10px;
     padding-bottom: 5px;
+    color: var(--fontColorLight);
 }
 
-h1 {
+header h1 {
     max-width: 25%;
-    font-size: 200%;
     padding-left: 5%;
 }
 
@@ -39,8 +49,19 @@ header li {
     padding-right: 20px;
 }
 
+header li a {
+    color: var(--fontColorLight);
+}
+
+header li a:visited {
+    color: var(--fontColorLight);
+}
+
 #photo {
     background-color: aqua;
+    background-image: url("../images/openroad.jpg");
+    background-size:cover;
+    background-position: center;
     margin-bottom: 5px;
     display: flex;
     justify-content: center;
@@ -54,7 +75,7 @@ header li {
 
 main{
     margin: 10px 0 10px 0; 
-    background-color: chartreuse;
+    background-color: var(--mainColor);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -65,7 +86,7 @@ main{
     width: 97%;
     height:auto;
     padding: 10px;
-    background-color:gray;
+    /*background-color:var(--mainColor);*/
     margin:10px;
     display: flex;
     flex-direction:row;
@@ -73,17 +94,17 @@ main{
 }
 
 .side-bar {
-    width: 20%;
+    width: 23%;
     min-height: 100%;
-    background-color: bisque;
+    /*background-color: var(--mainColor);*/
     border-right-width: 5px;
     border-color: chocolate;
     border-style: solid;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-end;
+    color: var(--fontColor);
 }
 
 .detail {
@@ -100,19 +121,22 @@ main{
 }
 
 .works {
-    width:650px;
+    width: 650px;
     height:300px;
     margin: 10px;
+    border: 5px solid var(--frameColor);
 }
 
 .works figcaption {
-    background-color: darkblue;
-    width:30%;
-    height:20%;
-    color:antiquewhite;
+    background-color: var(--frameColor);
+    width:fit-content;
+    height:fit-content;
+    padding: 10px;
+    color:var(--fontColor);
     position: relative;
-    bottom:20%; left: 0%;
+    bottom:30%; left: 0%;
     z-index: 10;
+    opacity: 0.8;
 }
 
 .work-images {
@@ -123,9 +147,11 @@ main{
 }
 
 .detail ul {
+    width: 97%;
+    min-height: 100px;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: baseline;
+    align-items: center;
 }
 
 footer {
@@ -134,22 +160,18 @@ footer {
 
 @media screen and (min-width: 993px){
 
-    .works:first-child:not(:hover){
+    .works:first-child{
         width:100%;
         height:500px;
     }
-    
+
+    /* mousr hover to enlarge selected work, found unexpected issue. will fix it later  
     .works:hover {
         order:-1;
         width: 100%;
         height: 500px;
     }
 
-    .works:hover ~ .works{
-        width:650px;   
-        height:300px;
-
-    }
     .work:hover .work-images {
         width:100%;
         max-height:100%;
@@ -157,18 +179,26 @@ footer {
         object-position: top;
     }
     
-
+*/
 }
 
 @media screen and (max-width:992px){
     
+    h3 {
+        font-size: 100%;
+    }
     .works {
         width: 46%;
+        height: 180px;
     }
 }
 
 @media screen and (max-width:768px){
     
+    h1,h2,h3,h4,h5 {
+        font-size: 150%;
+    }
+
    ul {
         display:inline-block;
     }
