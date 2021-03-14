@@ -14,9 +14,31 @@ body {
     background-color: var(--mainColor);
 }
 
-h1,h2,h3,h4,h5 {
-    font-size: 200%;
+/* reset font size for h1 to h6 tag.*/ 
+h1 {
+    font-size: 2em;
 }
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.17em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+h5 {
+    font-size: 0.83em;
+}
+
+h6 {
+    font-size: 0.67em;
+}
+
 
 header {
     display: flex;
@@ -39,8 +61,8 @@ ul {
 }
 
 header nav ul{
-    display: inline-flex;
-    list-style-type: none;
+    /*display: inline-flex;
+    list-style-type: none;*/
     text-align: right;
 }
 
@@ -58,7 +80,6 @@ header li a:visited {
 }
 
 #photo {
-    background-color: aqua;
     background-image: url("../images/openroad.jpg");
     background-size: cover;
     background-position: center;
@@ -168,6 +189,10 @@ main{
 
     padding: 10px;
 }
+
+a:visited {
+    color:blue;
+}
 footer {
     text-align: center;
 }
@@ -198,9 +223,6 @@ footer {
 
 @media screen and (max-width:992px){
     
-    h3 {
-        font-size: 100%;
-    }
     .works {
         width: 46%;
         height: 180px;
@@ -209,11 +231,6 @@ footer {
 
 @media screen and (max-width:768px){
     
-    h1,h2,h3,h4,h5 {
-        font-size: 150%;
-    }
-
-
     header ul {
         flex-direction: column;        
     }
@@ -246,7 +263,7 @@ footer {
         width:100%;
     }
     
-    #contect-list ul{
+    #Contect-list ul {
         flex-direction: column;
         justify-content: center;
     }
