@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
 }
-
+/* defind colors use in the page.*/
 :root{
  --mainColor: rgb(185, 204, 211);
  --highLight: rgba(16, 19, 163, 0.575);
@@ -9,12 +9,13 @@
  --fontColor: rgb(8, 62, 207);
  --fontColorLight:rgb(255, 255, 255);
 }
+
 body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: var(--mainColor);
 }
 
-/* reset font size for h1 to h6 tag.*/ 
+/* reset font size for h1 to h6 tag. */ 
 h1 {
     font-size: 2em;
 }
@@ -71,13 +72,15 @@ header li {
     padding-right: 20px;
 }
 
+
 header li a {
     color: var(--fontColorLight);
 }
-
+/* link won't change color after visited.*/
 header li a:visited {
     color: var(--fontColorLight);
 }
+
 
 #photo {
     background-image: url("../images/openroad.jpg");
@@ -87,7 +90,7 @@ header li a:visited {
     display: flex;
     justify-content: center;
 }
-
+/*set photo dimension*/
 #my-photo {
     height:5cm;
     width: 5cm;
@@ -105,6 +108,7 @@ main{
 
 }
 
+/* cards going to contain tow section, .side-bar and .detail */
 .cards{
     width: 97%;
     height:auto;
@@ -116,6 +120,7 @@ main{
     justify-content: space-evenly;
 }
 
+/* defined side bar element, it stays on the left side of screen.*/
 .side-bar {
     width: 23%;
     min-height: 100%;
@@ -129,12 +134,12 @@ main{
     align-items: flex-end;
     color: var(--fontColor);
 }
-
+/*.detail element, stays on the right side.*/
 .detail {
     width:75%;
     padding-left: 10px;
 }
-
+/*container of works card.*/
 #works-gallery{
     display:flex;
     flex-flow: row wrap;
@@ -149,7 +154,7 @@ main{
     margin: 10px;
     border: 5px solid var(--frameColor);
 }
-
+/* place figcaption on lower left corner of works elements. */
 .works figcaption {
     background-color: var(--frameColor);
     width:fit-content;
@@ -197,6 +202,7 @@ footer {
     text-align: center;
 }
 
+/*for display larger than 993 px, the first work car will take the first row.*/
 @media screen and (min-width: 993px){
 
     .works:first-child{
@@ -220,7 +226,7 @@ footer {
     
 */
 }
-
+/* Adjust works cards size for better fit for tablets. */
 @media screen and (max-width:992px){
     
     .works {
@@ -229,8 +235,9 @@ footer {
     }
 }
 
+/*for smart phones, adjust page layout to form a single column. */
 @media screen and (max-width:768px){
-    
+    /*list in hearder change flow direction to column*/ 
     header ul {
         flex-direction: column;        
     }
@@ -239,6 +246,7 @@ footer {
         padding:5px;
     }
     
+    /* stack side-bar and detail element*/
     .cards{
         flex-direction:column;
         align-items: center;
@@ -262,7 +270,7 @@ footer {
     .works {
         width:100%;
     }
-    
+    /*Stack li element in Contect-list.*/
     #Contect-list ul {
         flex-direction: column;
         justify-content: center;
