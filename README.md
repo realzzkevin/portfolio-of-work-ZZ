@@ -2,12 +2,29 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
-
+The goal of this project is to create a webpage to display a professional work portfolio use HTML and CSS language. This portfolio will work as a showcase of skills and talents to any potential employer. It contains personal information like name, photo, contact information, resumes; and most importantly, a collection of deployed applications. This webpage is currently just a basic frame, I’ll update it with more personal information and application later on.
+ 
 
 ## Features
 
+* Contain a collection of links of deployed applications.
+ 
+* Responsive design, opitimization layout for various screen sizes and devices.
+  
+## Screenshots
+
+Desktop:
+
+![Desktop](./assets/images/desktop.png)
+
+Tablets:
+![tablets](./assets/images/tablets.png)
+
+
+smartphones
+
+![smartphone](./assets/images/smartphone.png)
 
 
 ## Credits
