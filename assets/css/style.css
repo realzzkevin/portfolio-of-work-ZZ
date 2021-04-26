@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    border-width: 0;
 }
 /* defind colors use in the page.*/
 :root{
@@ -95,6 +96,7 @@ header li a:visited {
     height:5cm;
     width: 5cm;
     padding: 10px;
+    border-radius: 50%;
     object-fit: cover;
     object-position: center;
 }
@@ -108,8 +110,8 @@ main{
 
 }
 
-/* cards going to contain tow section, .side-bar and .detail */
-.cards{
+/* custCards going to contain tow section, .side-bar and .detail */
+.custCards{
     width: 97%;
     height:auto;
     padding: 10px;
@@ -226,7 +228,7 @@ footer {
     
 */
 }
-/* Adjust works cards size for better fit for tablets. */
+/* Adjust works custCards size for better fit for tablets. */
 @media screen and (max-width:992px){
     
     .works {
@@ -247,7 +249,7 @@ footer {
     }
     
     /* stack side-bar and detail element*/
-    .cards{
+    .custCards{
         flex-direction:column;
         align-items: center;
     }
